@@ -2,7 +2,6 @@
 
 :root {
   --base-black: #070707;
-  --base-orange: #f9a600;
   --link-gray: #b3b3b3;
   --link-hover: #d1d5db;
   --lg-font: 3rem;
@@ -36,6 +35,32 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+
+.link {
+  color: var(--link-gray);
+  font-size: var(--lg-font);
+  text-transform: uppercase;
+  font-size: 5rem;
+  transition: hover 0.3s ease-in-out;
+}
+.link:hover {
+  color: var(--link-hover);
+}
+.container {
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  height: 100vh;
+  background-image: url("./assets/CFS_Paloma_Infinity_Shot_04.jpg");
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: 0% 35%;
+  position: relative;
+}
+
+
 /* Navbar Styling */
 .navbar {
   display: flex;
@@ -53,10 +78,12 @@ a {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   z-index: 100;
+  visibility: hidden;
 }
 #menu-toggle-btn.active {
   width: 24px;
 }
+/* Hamburger Icon */
 span {
   height: 2px;
   background: #fff;
@@ -89,7 +116,7 @@ span:before {
 .active:hover span:before {
  top: unset;
 }
-
+/* Hamburger Links */
 .nav-container {
   position: fixed;
   top: 0;
@@ -115,6 +142,7 @@ span:before {
   text-transform: uppercase;
   margin: 1rem;
   transition: all 0.3s ease-in-out;
+  text-align: center;
 }
 .nav-item-wrapper::after {
   content: "";
@@ -149,6 +177,7 @@ span:before {
   position: absolute;
   padding: 1rem;
 }
+/* Navbar Logo */
 .logo.nav {
     z-index: 999;
     rotate: 90deg;
@@ -157,6 +186,8 @@ span:before {
     bottom: 100px;
     transform: rotate(0deg) translate(-50%, 50%);
 }
+
+/* Media Queries */
 @media only screen and (max-width: 1100px) {
   .nav {
     flex-direction: column-reverse;
@@ -169,29 +200,7 @@ span:before {
     height: 300px;
     bottom: 0;
   }
+  #menu-toggle-btn {
+    visibility: visible;
+  }
 }
-
-
-.link {
-  color: var(--link-gray);
-  font-size: var(--lg-font);
-  text-transform: uppercase;
-  font-size: 5rem;
-  transition: hover 0.3s ease-in-out;
-}
-.link:hover {
-  color: var(--link-hover);
-}
-.container {
-  max-width: 1440px;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  height: 100vh;
-  background-image: url("./assets/CFS_Paloma_Infinity_Shot_04.jpg");
-  background-size: 90%;
-  background-repeat: no-repeat;
-  background-position: 0% 35%;
-  position: relative;
-}
-
