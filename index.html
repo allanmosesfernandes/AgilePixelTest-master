@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgilePixel Test</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="normalize.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div id="menu-toggle-btn">
+          <span></span>
+        </div>
+      </div>
+      <img src="./assets/logo.svg" alt="AgilePixel Logo" class="logo" />
+      <div class="links">
+        <a href="#" class="link">hear</a>
+        <a href="#" class="link">latest</a>
+        <a href="#" class="link">tour</a>
+        <a href="#" class="link">see</a>
+        <a href="#" class="link">shop</a>
+        <a href="#" class="link">watch</a>
+        <a href="#" class="link">personal</a>
+        <a href="#" class="link">aid</a>
+      </div>
+      <div class="nav-container">
+        <div class="nav">
+          <!-- <div class="col flex">
+            <img src="./assets/logo.svg" alt="AgilePixel Logo" class="logo" />
+          </div> -->
+          <div class="col">
+            <div class="nav-link">
+              <a href="#">hear</a>
+              <div class="nav-item-wrapper"></div>
+            </div>
+            <div class="nav-link">
+              <a href="#">tour</a>
+              <div class="nav-item-wrapper"></div>
+            </div>
+            <div class="nav-link">
+              <a href="#">see</a>
+              <div class="nav-item-wrapper"></div>
+            </div>
+            <div class="nav-link">
+              <a href="#">shop</a>
+              <div class="nav-item-wrapper"></div>
+            </div>
+            <div class="nav-link">
+              <a href="#">watch</a>
+              <div class="nav-item-wrapper"></div>
+            </div>
+            <div class="nav-link">
+              <a href="#">personal</a>
+              <div class="nav-item-wrapper"></div>
+            </div>
+            <div class="nav-link">
+              <a href="#">aid</a>
+              <div class="nav-item-wrapper"></div>
+            </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const menuBtn = document.getElementById("menu-toggle-btn");
+      const navLinks = document.querySelector(".nav-container");
+      menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("active");
+        navLinks.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
