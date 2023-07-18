@@ -3,7 +3,7 @@
 :root {
   --base-black: #070707;
   --link-gray: #b3b3b3;
-  --link-hover: #d1d5db;
+  --link-hover: #f4f4f5;
   --lg-font: 3rem;
   --md-font: 2rem;
   --sm-font: 1rem;
@@ -36,16 +36,25 @@ a {
   color: inherit;
 }
 
-
+/* KEY FRAMES */
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .link {
   color: var(--link-gray);
   font-size: var(--lg-font);
   text-transform: uppercase;
   font-size: 5rem;
-  transition: hover 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .link:hover {
   color: var(--link-hover);
+  transform: translateX(10px);
 }
 .container {
   max-width: 1440px;
@@ -170,12 +179,18 @@ span:before {
   right: 0;
   transform-origin: top right;
   transform: translate(-270%, 62%) rotate(-90deg);
+  transition: all 0.3s ease-in;
+}
+
+.links:hover {
+  transform: translate();
 }
 
 .logo {
   height: 100%;
   position: absolute;
   padding: 1rem;
+  animation: fade-up 2.5s ease-in-out;
 }
 /* Navbar Logo */
 .logo.nav {
