@@ -6,15 +6,23 @@
     <title>AgilePixel Test</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="normalize.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <!-- Theme color -->
+    <meta name="theme-color" content="#b3b3b3">
+    <link rel="manifest" href="/site.webmanifest">
   </head>
   <body>
     <div class="container">
       <div class="navbar">
+        <!-- Hamburger Menu-->
         <div id="menu-toggle-btn">
           <span></span>
         </div>
       </div>
       <img src="./assets/logo.svg" alt="AgilePixel Logo" class="logo" />
+      <!-- Desktop Menu -->
       <div class="links">
         <a href="#" class="link">hear</a>
         <a href="#" class="link">latest</a>
@@ -25,11 +33,12 @@
         <a href="#" class="link">personal</a>
         <a href="#" class="link">aid</a>
       </div>
+      <!-- Mobile Menu -->
       <div class="nav-container">
         <div class="nav">
-          <!-- <div class="col flex">
-            <img src="./assets/logo.svg" alt="AgilePixel Logo" class="logo" />
-          </div> -->
+          <div class="">
+            <img src="./assets/logo.svg" alt="AgilePixel Logo" class="logo nav" />
+          </div>
           <div class="col">
             <div class="nav-link">
               <a href="#">hear</a>
@@ -66,8 +75,10 @@
       </div>
     </div>
     <script>
+      /* Target the elements */
       const menuBtn = document.getElementById("menu-toggle-btn");
       const navLinks = document.querySelector(".nav-container");
+      /* Attach event listeners &  Toggle Classes */
       menuBtn.addEventListener("click", () => {
         menuBtn.classList.toggle("active");
         navLinks.classList.toggle("active");
